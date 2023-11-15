@@ -4,13 +4,13 @@ let player2Choice = null;
 function choose(choice) {
     const currentPlayer = getCurrentPlayer();
     
-    if (currentPlayer === "Iago") {
+    if (currentPlayer === "player1") {
         player1Choice = choice;
-        document.getElementById("Iago").style.display = "none";
-        document.getElementById("Cristian").style.display = "block";
-    } else if (currentPlayer === "Cristian") {
+        document.getElementById("player1").style.display = "none";
+        document.getElementById("player2").style.display = "block";
+    } else if (currentPlayer === "player2") {
         player2Choice = choice;
-        document.getElementById("Cristian").style.display = "none";
+        document.getElementById("player2").style.display = "none";
         document.getElementById("coin").style.display = "block";
     }
 }
@@ -20,9 +20,9 @@ function flipCoin() {
     const result = Math.random() < 0.5 ? "cara" : "cruz";
 
     if (result === player1Choice) {
-        resultElement.textContent = "¡Iago gana!";
+        resultElement.textContent = "¡Jugador 1 gana!";
     } else if (result === player2Choice) {
-        resultElement.textContent = "¡Cristian gana!";
+        resultElement.textContent = "¡Jugador 2 gana!";
     } else {
         resultElement.textContent = "¡Empate!";
     }
@@ -33,10 +33,10 @@ function flipCoin() {
 
 function getCurrentPlayer() {
     if (!player1Choice) {
-        return "Iago";
+        return "player1";
     } else if (!player2Choice) {
-        return "Cristian";
+        return "player2";
     } else {
-        return null; 
+        return null; // Ambos jugadores han hecho su elección
     }
 }
