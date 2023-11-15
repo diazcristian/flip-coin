@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cara o Cruz</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Cara o Cruz</h1>
+    <div class="player" id="player1">
+        <p>Jugador 1</p>
+        <button onclick="choose('cara')">Cara</button>
+        <button onclick="choose('cruz')">Cruz</button>
+    </div>
+    <div class="player" id="player2">
+        <p>Jugador 2</p>
+        <button onclick="choose('cara')">Cara</button>
+        <button onclick="choose('cruz')">Cruz</button>
+    </div>
+    <div id="coin" onclick="flipCoin()"></div>
+    <p id="result"></p>
+    <script src="script.js"></script>
+</body>
+</html>
