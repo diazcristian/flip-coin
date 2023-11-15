@@ -1,0 +1,31 @@
+body {
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+}
+
+.player {
+    display: inline-block;
+    margin: 20px;
+}
+
+button {
+    font-size: 16px;
+}
+
+#coin {
+    width: 100px;
+    height: 100px;
+    background: url('coin.png');
+    background-size: cover;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+#result {
+    font-size: 20px;
+    font-weight: bold;
+}
